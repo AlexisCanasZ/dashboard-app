@@ -1,0 +1,115 @@
+.login__flex{
+	display: flex;
+	height: 100vh;
+	widows: 100vw;
+	align-items: center;
+	justify-content: center;
+	/* background: #03041A; */
+	background-image: linear-gradient(-80deg,#0be49b,#14cbd9);
+}
+
+.login__box{
+	font-family: 'Ubuntu';
+	width: 350px;
+	background: #0F1023;
+	border: 1px solid #11B1A8;
+	border-radius: 5px;
+	box-shadow: 0 0 15px 0 #0c7563;
+}
+
+.login__image img{
+	border: .2px solid #11B1A8;
+	box-shadow: 0 0 15px 0 #0c7563;
+}
+
+.login__box input{
+	background-color: #03041A;
+	color: #eee;
+	font-size: 18px;
+	border: 1px solid transparent;
+}
+
+.inputInvalido{
+	border-color: #dc3545!important;
+}
+
+.inputInvalido:focus{
+	box-shadow: 0 0 7.5px 0 #dc3545!important;
+}
+
+.login__box input:focus{
+	border-color: #11B1A8;
+	box-shadow: 0 0 7.5px 0 #0c7563;
+}
+
+.login__box button{
+	outline: none;
+	border: none;
+	color: #0F1023;
+	font-weight: bold;
+	background-image: linear-gradient(-80deg,#0be49b,#14cbd9);
+	box-shadow: 0 0 10px 0 #0c7563;
+}
+
+.login__box button:hover{
+	box-shadow: 0 0 20px 0 #0c7563;
+}
+
+.login__box button:active{
+	color: #0F1023;
+	transform: translateY(2px);
+	box-shadow: 0 0 20px 0 #0c7563!important;
+}
+
+.recordarUsuario{
+	font-size: 14px;
+}
+
+.recordarUsuario input{
+	display: none;
+}
+
+/* .recordarUsuario label:before */
+
+.recordarUsuario a{
+	color: #11B1A8;
+	transition: all ease .1s;
+}
+
+.recordarUsuario a:hover{
+	text-decoration: none;
+	text-shadow: 0 0 5px #0c7563;
+}
+
+.recordarUsuario label {
+  user-select: none;
+  cursor: pointer;
+  position: relative;
+  padding-left: 24px;
+}
+
+.recordarUsuario label::before {
+	content: "\f00c";
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 900;
+	font-size: 13px;
+	color: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	border-radius: 3px;
+	background: #03041A;
+	/* border: 2px solid #11B1A8; */
+	left: 0;
+	top: 1.5px;
+	/* transform: translateY(-50%); */
+	transition: all ease .15s;
+}
+
+.inputCheckbox:checked + .labelCheck::before {
+  color: #11B1A8;
+  box-shadow: 0 0 5px #0c7563;
+}

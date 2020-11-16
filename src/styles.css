@@ -1,1 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
+/* .swal2-popup.swal2-toast {
+	box-shadow: 0 0 10px 0 #0c7563;
+	background: pink;
+} */
+
+.swal2-popup.swal2-toast {
+  box-shadow: 0 0 10px 0 #0c7563;
+  background: #0F1023;
+  border: 1px solid #11B1A8;
+}

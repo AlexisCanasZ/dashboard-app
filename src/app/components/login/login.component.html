@@ -1,0 +1,39 @@
+<div class="login__flex">
+	<div class="login__box text-white p-4 animate__animated animate__backInDown animate__fast">
+		<div class="login__image text-center pb-4">
+			<img src="assets/logo-aw.png" alt="Alexis Web Logo" width="75px">
+		</div>
+		<h3 class="d-block text-center mb-4">INICIAR SESION</h3>
+		<form (ngSubmit)="login(f)" #f="ngForm" autocomplete="off">
+			<div class="form-group">
+				<input type="email" [(ngModel)]="usuario.email" [ngClass]="{'is-invalid inputInvalido animate__animated animate__headShake': f.submitted && f.controls['username'].errors}" name="username" class="form-control py-4" placeholder="Correo electronico" required email>
+				<small class="text-danger animate__animated animate__fadeInDown animate__faster" *ngIf="f.submitted && f.controls['username'].errors">El correo electronico es obligatorio</small>
+			</div>
+			<div class="form-group">
+				<input type="password" [(ngModel)]="usuario.password" [ngClass]="{'is-invalid inputInvalido animate__animated animate__headShake': f.submitted && f.controls['password'].errors}" name="password" class="form-control py-4" placeholder="Contraseña" required minlength="6">
+				<small class="text-danger animate__animated animate__fadeInDown animate__faster" *ngIf="f.submitted && f.controls['password'].errors">La contraseña debe tener minimo 6 caracteres</small>
+			</div>
+			<div class="d-flex justify-content-between recordarUsuario mb-2">
+			  <div>
+			    <input [(ngModel)]="recuerdame" name="recuerdame" type="checkbox" id="check" class="inputCheckbox mr-1">
+			    <label for="check" class="labelCheck">
+			      Recordar mi usuario
+			    </label>
+			  </div>
+
+			  <div>
+			    <a routerLink="/signup" class="txt1">
+			      ¿No tienes cuenta?
+			    </a>
+			  </div>
+			</div>
+			<!-- <input type="checkbox" id="recordar"> -->
+			<!-- <label for="recordar" class="ml-2">Recordar usuario</label> -->
+			<button class="btn btn-primary btn-block py-2 my-1" [ngClass]="{'disabled': loading}" type="submit">
+				<i class="fas fa-sign-in-alt fa-fw mr-1" *ngIf="!loading"></i>
+				<i class="fas fa-circle-notch fa-spin fa-fw mr-1" *ngIf="loading"></i>
+				INICIAR SESION
+			</button>
+		</form>
+	</div>
+</div>
